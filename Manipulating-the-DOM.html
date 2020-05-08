@@ -21,6 +21,11 @@
         </div>
 
         <div class="form-item">
+          <label for="fake-email" class="primary">Last Name</label>
+          <input type="email" id="fake_email" value="fake-email@faked.com" />
+        </div>
+
+        <div class="form-item">
           <label for="title" class="primary">Gender</label>
           <br />
           <input
@@ -36,13 +41,29 @@
         </div>
 
         <div class="form-item">
+          <label for="checkbox-love"> Do you love checkboxes?</label><br />
+          <input type="checkbox" id="checkbox_love" />
+        </div>
+
+        <div class="form-item">
           <label for="category" class="primary">Category</label>
           <select id="category">
-            <option value="Option 1">Option 1</option>
-            <option value="Option 2">Option 2</option>
-            <option value="Option 3">Option 3</option>
+            <option value="Option 1 is the best">Option 1</option>
+            <option value="Option 2 is better">Option 2</option>
+            <option value="Option 3 is bestest (might not be a word)"
+              >Option 3</option
+            >
           </select>
         </div>
+
+        <label for="meaningless-date">Please select a meaningless date:</label>
+        <br />
+        <input
+          type="date"
+          id="meaningless_date"
+          name="meaningless-date"
+          value="2020-05-05"
+        />
       </div>
       <input type="submit" value="save" class="btn" />
     </form>

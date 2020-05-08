@@ -20,17 +20,35 @@ const createReadingListItem = function (form) {
   const contentListItem = document.createElement("li");
   contentListItem.classList.add("content-item");
 
-  const fullname = document.createElement("h2");
+  const fullname = document.createElement("h3");
   fullname.textContent = form.first_name.value + " " + form.last_name.value;
   contentListItem.appendChild(fullname);
 
+  const email = document.createElement("p");
+  email.textContent = form.fake_email.value;
+  contentListItem.appendChild(email);
+
   const gender = document.createElement("p");
-  gender.textContent = form.male.value + form.female.value;
+  if (form.male.checked) {
+    gender.textContent = form.male.value;
+  } else {
+    gender.textContent = form.female.value;
+  }
   contentListItem.appendChild(gender);
+
+  const checkbox_lover = document.createElement("p");
+  if (checkbox_love.checked) {
+    checkbox_lover.textContent = "I am the world's biggest fan of checkboxes";
+    contentListItem.appendChild(checkbox_lover);
+  }
 
   const category = document.createElement("p");
   category.textContent = form.category.value;
   contentListItem.appendChild(category);
+
+  const silly_date = document.createElement("p");
+  category.textContent = form.meaningless_date.value;
+  contentListItem.appendChild(silly_date);
 
   return contentListItem;
 };

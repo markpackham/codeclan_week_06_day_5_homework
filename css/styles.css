@@ -5,6 +5,7 @@
 
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1rem;
 }
 
 ul {
@@ -13,13 +14,16 @@ ul {
 
 .form-item,
 .btn,
+#meaningless_date,
 h2,
 h3,
 h4 {
   margin: 1rem 0.5rem;
 }
 
-.btn {
+.btn,
+input,
+#category {
   padding: 0.5rem;
 }
 
@@ -28,4 +32,6 @@ h4 {
 }
 
 label.primary {
+  font-size: 1.2rem;
+  font-weight: bolder;
 }
