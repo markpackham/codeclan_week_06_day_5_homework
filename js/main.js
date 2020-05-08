@@ -3,11 +3,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const newItemform = document.querySelector("#new-item-form");
   newItemform.addEventListener("submit", handleNewItemFormSubmit);
 
+  const purpleAllButton = document.querySelector("#turn-purple");
+  purpleAllButton.addEventListener("click", handlePurplePara);
+
+  const removePurpleAllButton = document.querySelector("#remove-purple");
+  removePurpleAllButton.addEventListener("click", handleRemovePurplePara);
+
   const deleteAllButton = document.querySelector("#delete-all");
   deleteAllButton.addEventListener("click", handleDeleteAllClick);
 
-  const purpleAllButton = document.querySelector("#turn-purple");
-  purpleAllButton.addEventListener("click", handlePurplePara);
+  // h1 Hover over effect
+  const h1Shift = document.querySelector("h1");
+  h1Shift.onmouseover = logMouseOver;
+  h1Shift.onmouseout = logMouseOut;
+  function logMouseOver() {
+    h1Shift.innerHTML = "Please do not hover over me.";
+  }
+  function logMouseOut() {
+    h1Shift.innerHTML = "Random timesink generic form";
+  }
 });
 
 // Submit data
@@ -22,7 +36,7 @@ const handleNewItemFormSubmit = function (event) {
 };
 
 // Populate page
-const createReadingListItem = function (form) {
+const createReadingListItem = (form) => {
   // Content list items
   const contentListItem = document.createElement("li");
   const fullname = document.createElement("h3");
@@ -67,16 +81,24 @@ const createReadingListItem = function (form) {
   return contentListItem;
 };
 
-// Delete data
-const handleDeleteAllClick = function (event) {
-  const contentList = document.querySelector("#content");
-  contentList.innerHTML = "";
-};
-
-const handlePurplePara = function (event) {
+// Turn all paragraph tags purple (and have an excuse to use querySelectorAll)
+const handlePurplePara = (event) => {
   const paragraphList = document.querySelectorAll("p");
   for (let i = 0; i < paragraphList.length; ++i) {
     paragraphList[i].classList.add("turnPurple");
   }
-  // paragraphList.setAttribute("class", "turnPurple");
+};
+
+// Remove Purple Effect
+const handleRemovePurplePara = (event) => {
+  const paragraphList = document.querySelectorAll("p");
+  for (let i = 0; i < paragraphList.length; ++i) {
+    paragraphList[i].classList.remove("turnPurple");
+  }
+};
+
+// Delete data
+const handleDeleteAllClick = (event) => {
+  const contentList = document.querySelector("#content");
+  contentList.innerHTML = "";
 };
