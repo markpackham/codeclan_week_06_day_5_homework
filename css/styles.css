@@ -22,6 +22,7 @@ p {
 
 .form-item,
 .btn,
+.delete-us,
 #meaningless_date,
 h2,
 h3,
@@ -46,6 +47,8 @@ input,
 .content-item {
   margin: 1rem;
   padding: 1rem;
+  background-color: aquamarine;
+  border-radius: 5px;
 }
 
 label.primary {
@@ -74,4 +77,8 @@ label.primary {
 
 .turnPurple {
   background-color: purple;
+}
+
+.delete-us {
+  font-size: 0.9rem;
 }

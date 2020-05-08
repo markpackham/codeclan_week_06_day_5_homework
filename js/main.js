@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const deleteAllButton = document.querySelector("#delete-all");
   deleteAllButton.addEventListener("click", handleDeleteAllClick);
 
+  const handleDeleteLiButton = document.querySelector("#delete-li");
+  handleDeleteLiButton.addEventListener("click", handleDeleteLi);
+
   // h1 Hover over effect
   const h1Shift = document.querySelector("h1");
   h1Shift.onmouseover = logMouseOver;
@@ -108,4 +111,10 @@ const handleRemovePurplePara = () => {
 const handleDeleteAllClick = () => {
   const contentList = document.querySelector("#content");
   contentList.innerHTML = "";
+};
+
+// Delete line item
+const handleDeleteLi = () => {
+  let item = document.getElementById("del-item");
+  item.parentNode.removeChild(item);
 };
