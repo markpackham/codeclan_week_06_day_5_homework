@@ -22,7 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
   function logMouseOut() {
     h1Shift.innerHTML = "Random timesink generic form";
   }
+
+  h2_styling();
 });
+
+// h2 styling
+h2_styling = () => {
+  document.querySelector("h2").style.backgroundColor = "#c58686";
+  document.querySelector("h2").style.fontStyle = "italic";
+};
 
 // Submit data
 const handleNewItemFormSubmit = function (event) {
