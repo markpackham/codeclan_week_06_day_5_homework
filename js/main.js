@@ -1,3 +1,4 @@
+// Event listener
 document.addEventListener("DOMContentLoaded", () => {
   const newItemform = document.querySelector("#new-item-form");
   newItemform.addEventListener("submit", handleNewItemFormSubmit);
@@ -6,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   deleteAllButton.addEventListener("click", handleDeleteAllClick);
 });
 
+// Submit data
 const handleNewItemFormSubmit = function (event) {
   event.preventDefault();
 
@@ -16,7 +18,7 @@ const handleNewItemFormSubmit = function (event) {
   event.target.reset();
 };
 
-// Submit data
+// Populate page
 const createReadingListItem = function (form) {
   // Content list items
   const contentListItem = document.createElement("li");
@@ -26,6 +28,14 @@ const createReadingListItem = function (form) {
   const checkbox_lover = document.createElement("p");
   const category = document.createElement("p");
   const silly_date = document.createElement("p");
+  const listItems = [
+    fullname,
+    email,
+    gender,
+    checkbox_lover,
+    category,
+    silly_date,
+  ];
 
   // Write Text
   fullname.textContent = form.first_name.value + " " + form.last_name.value;
@@ -42,17 +52,14 @@ const createReadingListItem = function (form) {
   }
 
   category.textContent = form.category.value;
-  category.textContent = form.meaningless_date.value;
+  silly_date.textContent = form.meaningless_date.value;
 
+  // Add children
   contentListItem.classList.add("content-item");
-
-  // Append Children
-  contentListItem.appendChild(fullname);
-  contentListItem.appendChild(email);
-  contentListItem.appendChild(gender);
-  contentListItem.appendChild(checkbox_lover);
-  contentListItem.appendChild(category);
-  contentListItem.appendChild(silly_date);
+  for (let item of listItems) {
+    console.log(item);
+    contentListItem.appendChild(item);
+  }
 
   return contentListItem;
 };
