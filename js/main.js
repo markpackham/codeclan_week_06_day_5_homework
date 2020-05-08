@@ -82,7 +82,6 @@ const createReadingListItem = (form) => {
   // Add children
   contentListItem.classList.add("content-item");
   for (let item of listItems) {
-    console.log(item);
     contentListItem.appendChild(item);
   }
 
@@ -90,7 +89,7 @@ const createReadingListItem = (form) => {
 };
 
 // Turn all paragraph tags purple (and have an excuse to use querySelectorAll)
-const handlePurplePara = (event) => {
+const handlePurplePara = () => {
   const paragraphList = document.querySelectorAll("p");
   for (let i = 0; i < paragraphList.length; ++i) {
     paragraphList[i].classList.add("turnPurple");
@@ -98,7 +97,7 @@ const handlePurplePara = (event) => {
 };
 
 // Remove Purple Effect
-const handleRemovePurplePara = (event) => {
+const handleRemovePurplePara = () => {
   const paragraphList = document.querySelectorAll("p");
   for (let i = 0; i < paragraphList.length; ++i) {
     paragraphList[i].classList.remove("turnPurple");
@@ -106,7 +105,7 @@ const handleRemovePurplePara = (event) => {
 };
 
 // Delete data
-const handleDeleteAllClick = (event) => {
+const handleDeleteAllClick = () => {
   const contentList = document.querySelector("#content");
   contentList.innerHTML = "";
 };
