@@ -12,6 +12,10 @@ ul {
   list-style: none;
 }
 
+#form-wrapper {
+  margin-left: 1rem;
+}
+
 .form-item,
 .btn,
 #meaningless_date,
@@ -34,4 +38,18 @@ input,
 label.primary {
   font-size: 1.2rem;
   font-weight: bolder;
+}
+
+.btn {
+  border-radius: 5px;
+}
+
+.save:hover {
+  font-size: 1.3rem;
+  background-color: burlywood;
+}
+
+.danger:hover {
+  font-size: 1.3rem;
+  background-color: crimson;
 }
