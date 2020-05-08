@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const deleteAllButton = document.querySelector("#delete-all");
   deleteAllButton.addEventListener("click", handleDeleteAllClick);
+
+  const purpleAllButton = document.querySelector("#turn-purple");
+  purpleAllButton.addEventListener("click", handlePurplePara);
 });
 
 // Submit data
@@ -68,4 +71,12 @@ const createReadingListItem = function (form) {
 const handleDeleteAllClick = function (event) {
   const contentList = document.querySelector("#content");
   contentList.innerHTML = "";
+};
+
+const handlePurplePara = function (event) {
+  const paragraphList = document.querySelectorAll("p");
+  for (let i = 0; i < paragraphList.length; ++i) {
+    paragraphList[i].classList.add("turnPurple");
+  }
+  // paragraphList.setAttribute("class", "turnPurple");
 };

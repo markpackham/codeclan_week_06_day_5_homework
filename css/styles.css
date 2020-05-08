@@ -12,6 +12,10 @@ ul {
   list-style: none;
 }
 
+p {
+  padding: 0.5rem;
+}
+
 #form-wrapper {
   margin-left: 1rem;
 }
@@ -32,7 +36,15 @@ input,
 }
 
 #content {
-  margin: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+
+.content-item {
+  margin: 1rem;
+  padding: 1rem;
 }
 
 label.primary {
@@ -52,4 +64,13 @@ label.primary {
 .danger:hover {
   font-size: 1.3rem;
   background-color: crimson;
+}
+
+.purp:hover {
+  font-size: 1.3rem;
+  background-color: purple;
+}
+
+.turnPurple {
+  background-color: purple;
 }
