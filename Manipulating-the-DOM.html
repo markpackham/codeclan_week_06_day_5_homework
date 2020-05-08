@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/main.js"></script>
+    <title>Manipulating the DOM</title>
+  </head>
+  <body>
+    <form id="new-item-form">
+      <div id="form-wrapper">
+        <div class="form-item">
+          <label for="title" class="primary">First Name</label>
+          <input type="text" id="first_name" required />
+        </div>
+
+        <div class="form-item">
+          <label for="title" class="primary">Last Name</label>
+          <input type="text" id="last_name" required />
+        </div>
+
+        <div class="form-item">
+          <label for="title" class="primary">Gender</label>
+          <br />
+          <input
+            type="radio"
+            id="male"
+            name="gender"
+            value="male"
+            checked="checked"
+          />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
+        </div>
+
+        <div class="form-item">
+          <label for="category" class="primary">Category</label>
+          <select id="category">
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+            <option value="Option 3">Option 3</option>
+          </select>
+        </div>
+      </div>
+      <input type="submit" value="save" class="btn" />
+    </form>
+
+    <button id="delete-all" class="btn">Delete All Content</button>
+
+    <h2>Content to populate</h2>
+    <ul id="content"></ul>
+  </body>
+</html>
