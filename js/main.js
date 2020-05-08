@@ -16,43 +16,48 @@ const handleNewItemFormSubmit = function (event) {
   event.target.reset();
 };
 
+// Submit data
 const createReadingListItem = function (form) {
+  // Content list items
   const contentListItem = document.createElement("li");
-  contentListItem.classList.add("content-item");
-
   const fullname = document.createElement("h3");
-  fullname.textContent = form.first_name.value + " " + form.last_name.value;
-  contentListItem.appendChild(fullname);
-
   const email = document.createElement("p");
-  email.textContent = form.fake_email.value;
-  contentListItem.appendChild(email);
-
   const gender = document.createElement("p");
+  const checkbox_lover = document.createElement("p");
+  const category = document.createElement("p");
+  const silly_date = document.createElement("p");
+
+  // Write Text
+  fullname.textContent = form.first_name.value + " " + form.last_name.value;
+  email.textContent = form.fake_email.value;
+
   if (form.male.checked) {
     gender.textContent = form.male.value;
   } else {
     gender.textContent = form.female.value;
   }
-  contentListItem.appendChild(gender);
 
-  const checkbox_lover = document.createElement("p");
   if (checkbox_love.checked) {
-    checkbox_lover.textContent = "I am the world's biggest fan of checkboxes";
-    contentListItem.appendChild(checkbox_lover);
+    checkbox_lover.textContent = "I am the World's biggest fan of checkboxes";
   }
 
-  const category = document.createElement("p");
   category.textContent = form.category.value;
-  contentListItem.appendChild(category);
-
-  const silly_date = document.createElement("p");
   category.textContent = form.meaningless_date.value;
+
+  contentListItem.classList.add("content-item");
+
+  // Append Children
+  contentListItem.appendChild(fullname);
+  contentListItem.appendChild(email);
+  contentListItem.appendChild(gender);
+  contentListItem.appendChild(checkbox_lover);
+  contentListItem.appendChild(category);
   contentListItem.appendChild(silly_date);
 
   return contentListItem;
 };
 
+// Delete data
 const handleDeleteAllClick = function (event) {
   const contentList = document.querySelector("#content");
   contentList.innerHTML = "";
