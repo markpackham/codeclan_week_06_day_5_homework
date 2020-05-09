@@ -11,6 +11,11 @@
     <form id="new-item-form">
       <div id="form-wrapper">
         <h1>Random timesink generic form</h1>
+        <input
+          id="a-hiddenfield"
+          type="hidden"
+          value="some hidden data to fool bots"
+        />
 
         <div class="form-item">
           <label for="title" class="primary">First Name</label>
@@ -68,6 +73,8 @@
           id="meaningless_date"
           name="meaningless-date"
           value="2020-05-05"
+          min="2020-05-01"
+          max="2220-01-01"
         />
         <br />
         <input type="submit" value="Save" class="btn save" />
@@ -77,7 +84,7 @@
       </div>
       <button id="delete-all" class="btn danger">Delete All Content</button>
       <button id="delete-li" class="btn danger">
-        Delete Line Items Children
+        Delete li Children Test
       </button>
     </form>
     <h2>Miscellaneous content to populate list:</h2>
@@ -88,5 +95,6 @@
       <li id="del-item">And Delete Me</li>
     </ul>
     <ul id="content"></ul>
+    <footer>Copyright <span id="current-year"></footer>
   </body>
 </html>

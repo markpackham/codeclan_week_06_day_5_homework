@@ -1,5 +1,9 @@
 // Event listener
 document.addEventListener("DOMContentLoaded", () => {
+  const currentYear = document.querySelector("#current-year");
+  let year = new Date();
+  currentYear.innerHTML = year.getFullYear();
+
   const newItemform = document.querySelector("#new-item-form");
   newItemform.addEventListener("submit", handleNewItemFormSubmit);
 

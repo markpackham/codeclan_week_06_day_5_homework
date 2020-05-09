@@ -12,25 +12,19 @@ ul {
   list-style: none;
 }
 
-p {
-  padding: 0.5rem;
-}
-
-#form-wrapper {
-  margin-left: 1rem;
-}
-
 .form-item,
 .btn,
 .delete-us,
 #meaningless_date,
 h2,
 h3,
-h4 {
+h4,
+footer {
   padding: 0.3rem;
   margin: 1rem 0.5rem;
 }
 
+p,
 .btn,
 input,
 #category {
@@ -42,6 +36,15 @@ input,
   flex-direction: row;
   padding: 0.5rem;
   margin: 1rem;
+}
+
+#fake_email:hover {
+  opacity: 0.5;
+  background-color: bisque;
+}
+
+#form-wrapper {
+  margin-left: 1rem;
 }
 
 .content-item {
@@ -60,18 +63,21 @@ label.primary {
   border-radius: 5px;
 }
 
-.save:hover {
+.save:hover,
+.danger:hover,
+.purp:hover {
   font-size: 1.3rem;
+}
+
+.save:hover {
   background-color: burlywood;
 }
 
 .danger:hover {
-  font-size: 1.3rem;
   background-color: crimson;
 }
 
 .purp:hover {
-  font-size: 1.3rem;
   background-color: purple;
 }
 
