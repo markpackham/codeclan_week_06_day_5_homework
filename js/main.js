@@ -122,3 +122,21 @@ const handleDeleteLi = () => {
   let item = document.getElementById("del-item");
   item.parentNode.removeChild(item);
 };
+
+// Put a message when a page has loaded
+window.onload = (event) => {
+  setTimeout(console.log("page is fully loaded"), 5000);
+};
+
+// Create a vanishing window
+function vanish_window() {
+  const vanishing_window = window.open(
+    "",
+    "vanishing_window",
+    "width=100, height=50"
+  );
+  vanishing_window.document.write("<p>I vanish in 5 secs</p>");
+  setTimeout(function () {
+    vanishing_window.close();
+  }, 5000);
+}
