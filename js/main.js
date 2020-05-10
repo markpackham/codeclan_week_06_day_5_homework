@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // h2 styling
 h2_styling = () => {
   document.querySelector("h2").style.backgroundColor = "#c58686";
+  document.querySelector("h2").style.borderRadius = "5px";
   document.querySelector("h2").style.fontStyle = "italic";
 };
 
@@ -58,6 +59,7 @@ const createReadingListItem = (form) => {
   const email = document.createElement("p");
   const gender = document.createElement("p");
   const checkbox_lover = document.createElement("p");
+  const range_lover = document.createElement("p");
   const category = document.createElement("p");
   const silly_date = document.createElement("p");
   const listItems = [
@@ -65,6 +67,7 @@ const createReadingListItem = (form) => {
     email,
     gender,
     checkbox_lover,
+    range_lover,
     category,
     silly_date,
   ];
@@ -80,8 +83,11 @@ const createReadingListItem = (form) => {
   }
 
   if (checkbox_love.checked) {
-    checkbox_lover.textContent = "I am the World's biggest fan of checkboxes";
+    checkbox_lover.textContent = "I am the World's biggest fan of checkboxes!";
   }
+
+  range_lover.textContent =
+    "My range love is " + form.range_love.value + " out of 10?";
 
   category.textContent = form.category.value;
   silly_date.textContent = form.meaningless_date.value;
